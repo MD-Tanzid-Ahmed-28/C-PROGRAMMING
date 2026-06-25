@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <math.h>
 int main(){
-int Student_ID;
+char Student_ID[50];
 char Student_Name[50];
 float mark1,mark2,mark3,avg;
 float length,width,radius;
 printf("Enter student id:");
-scanf("%d",&Student_ID);
+fgets(Student_ID,50,stdin);
+getchar();
 printf("Enter Student name:");
-scanf("%s",&Student_Name);
+fgets(Student_Name,50,stdin);
 printf("Enter 3 sub mark:");
 scanf("%f%f%f",&mark1,&mark2,&mark3);
 printf("Enter length,width and radius:");
 scanf("%f%f%f",&length,&width,&radius);
 float total=mark1+mark2+mark3;
 avg=total/3;
-printf("Student ID:%d\n",Student_ID);
+printf("Student ID:%s\n",Student_ID);
 printf("Student Name:%s\n",Student_Name);
 printf("Total Mark:%.2f\n",total);
 printf("AVG mark:%.2f\n",avg);
